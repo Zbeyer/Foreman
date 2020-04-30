@@ -1,19 +1,17 @@
 <head>
-  <title>foreman</title>
+    <title>foreman</title>
 </head>
 
 <body>
-  {{> sheet}}
-
-  {{> addNote}}
-  
-  <div class="container">
-    <ul class="collection">
-      {{#each notes}}
-        {{> note}}
-      {{/each}}
-    </ul>
-  </div>
+    {{> sheet}}
+    <!-- {{> tasks}} -->
+     <!-- {{> addNote}} -->
+<!-- 
+    <div class="container">
+        <ul class="collection">
+            {{#each notes}} {{> note}} {{/each}}
+        </ul>
+    </div> -->
 </body>
 
 <template name="note">
@@ -22,6 +20,7 @@
 
 <template name="sheet">
   <h1>Foreman</h1>
+  <p>This is the new meteor implementation of the Foreman mining app.</p>
 </template>
 
 <template name="addNote">

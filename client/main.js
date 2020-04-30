@@ -1,6 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Notes } from '../lib/collections.js';
+import '../lib/Services/TaskService.js';
+import '../imports/ui/todo/todo-body.js';
+import '../imports/api/todo/tasks.js';
 
 import './main.html';
 
@@ -29,3 +31,4 @@ Template.addNote.events({
     return false;
   }
 });
+ 
