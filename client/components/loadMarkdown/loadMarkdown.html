@@ -1,0 +1,10 @@
+<template name="loadMarkdown">
+	{{#markdown}}
+		{{#if markdownFileError}}
+			{{markdownFileError}}
+		{{/if}}
+		{{#if markdownFileContents}}
+			{{markdownFileContents}}
+		{{/if}}
+	{{/markdown}}
+</template>
