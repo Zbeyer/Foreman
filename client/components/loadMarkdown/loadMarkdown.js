@@ -8,16 +8,20 @@ Template.loadMarkdown.onRendered(function ()
 {
     let template = Template.instance();
     let fileName = Template.instance().data + ".md";
-    console.log('rendered');
+
+    // Reset inner
     template.markdownFileContents.set(undefined);
     template.markdownFileError.set(undefined);
-    console.log("MD Request for %o", fileName);
 
     Meteor.call('getMarkdown', fileName, function (error, results)
     {
-        console.log("result: %o\nerror: %o", results, error)
         results ? template.markdownFileContents.set(results) : template.markdownFileContents.set(undefined);
         error ? template.markdownFileError.set(error) : template.markdownFileError.set(undefined);
+
+        if(error)
+        {
+            console.error(error);
+        }
     });
 })
 
